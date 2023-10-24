@@ -1,31 +1,32 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/form.css">
         <link rel="icon" href="/images/mei_logo_web.png" type="image/x-icon"/>
-        <title>Cotización</title> 
+        <title>Cotización</title>
     </head>
     <body>
         
         <form action="/cotizacion" method="post">
-            <label class="lblform" for="name">Nombre Completo</label>
+            <label class="lblform" for="name">NOMBRE COMPLETO</label>
             <input type="text" id="name" name="name" required><br/>
             <label class="lblform" for="rut">RUT</label>
             <input type="text" id="rut" name="rut" required><br/>
-            <label class="lblform" for="direccion">Dirección</label>
+            <label class="lblform" for="direccion">DIRECCIÓN</label>
             <input type="text" id="address" name="address" required><br/>
-            <label class="lblform" for="direccion">Comuna</label>
+            <label class="lblform" for="direccion">COMUNA</label>
             <input type="text" id="commune" name="commune" required><br/>
-            <label class="lblform" for="tel">Teléfono</label>
+            <label class="lblform" for="tel">TELÉFONO</label>
             <input type="tel" id="phone" name="phone" required><br/>
-            <label class="lblform" for="mail">Correo</label>
+            <label class="lblform" for="mail">CORREO</label>
             <input type="email" id="mail" name="mail" required><br/><br/>
-            <label class="lblform">Elija su producto a cotizar:</label><br/><br/>
+            <label class="lblform">ELIJA SU PRODUCTO A COTIZAR:</label><br/><br/>
             <img class="fotoform" src="/images/foto1.jpg" alt="pulsera">
             <input type="checkbox" id="foto1" name="product" value="Art. 101: pulsera protectora">
             <img class="fotoform" src="/images/foto2.jpg" alt="collar">
             <input type="checkbox" id="foto2" name="product" value="Art. 102: collar niñ@s"><br/><br/>
             <textarea class="commentbox" id="comment" name="comment" placeholder="Deje su comentario."></textarea><br/><br/>
-            <input type="submit" value="Cotizar" id="aceptar">
+            <input class="cotizar" type="submit" value="Cotizar" id="aceptar">
         </form>
 
                 <a class="wsp" href="https://wa.me/56952170243" target="_blank">

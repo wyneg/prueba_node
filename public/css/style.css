@@ -1,14 +1,19 @@
 @font-face {
-    font-family: Molengo;
-    src: url(Molengo-Regular.ttf);
+    font-family: Quicksand;
+    src: url(Quicksand-Light.ttf);
 }
-
-.logo { display: block; margin-left: auto; margin-right: auto; width: 30%;}
-.texto {font-family: Molengo; text-align: center;}
-.wsp {position: -webkit-sticky; position: sticky; top: 0; width: 50px; height: 50px; float: right;  }
+.divcenter { text-align: center; padding: 0;}
+.f1, .f2 { display: inline-block; text-align: center; overflow: hidden;}
+.foto1, .foto3 { width: 570px; height: 284.8px; float: left; overflow: hidden;}
+.foto2, .foto4 { width: 570px; height: 284.8px; float: right; overflow: hidden;}
+.prod { width: 49%; height: auto;}
+.texto {font-family: Quicksand; text-align: center; letter-spacing: .1rem; color: #7b7d7b;}
+.wsp { position: sticky; bottom: 0; float: right;}
+.wsplogo { width: 50px; height: auto;}
 
 @media screen and (max-device-width: 480px) {
+    .foto1, .foto2, .foto3, .foto4 { text-align: center; width: fit-content; height: fit-content; overflow: hidden;}
     .logo { display: block; margin-left: auto; margin-right: auto; width: 80%;}
-    .texto {font-family: Molengo; text-align: center; font-size: 200%;}
-    .wsp {position: -webkit-sticky; position: sticky; top: 0; width: 80px; height: 80px; float: right;}
+    .texto {font-family: Quicksand; text-align: center; font-size: 200%; letter-spacing: .1rem; color: #7b7d7b;}
+    .wsplogo { width: 60px; height: auto; }
 }
