@@ -3,14 +3,15 @@
     src: url(Quicksand-Light.ttf);
 }
 
-.wsp {position: -webkit-sticky; position: sticky; top: 0; width: 50px; height: 50px; float: right;  }
+.wsp { position: -webkit-sticky; position: sticky; bottom: 0; float: right;}
+.wsplogo { width: 50px; height: auto;}
 .fotoform {width: 10%; height: auto; }
 .commentbox {width: 400px; height: 100px; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
 .lblform, .cotizar { font-size: .8em; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
 
-/*@media screen and (max-device-width: 480px) {
-    .wsp {position: -webkit-sticky; position: sticky; top: 0; width: 80px; height: 80px; float: right;}
+@media screen and (max-device-width: 480px) {
+    .wsplogo { width: 50px; height: auto;}
     .fotoform {width: 25%; height: auto; }
     .commentbox {width: 90%; height: 300px; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
     .lblform, .cotizar { font-size: 2em; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
-}*/
+}
