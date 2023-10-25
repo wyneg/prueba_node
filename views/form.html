@@ -6,21 +6,67 @@
         <title>Cotización</title>
     </head>
     <body>
-        
+       <div class="formu">
         <form action="/cotizacion" method="post">
-            <label class="lblform" for="name">NOMBRE COMPLETO</label>
-            <input type="text" id="name" name="name" required><br/>
-            <label class="lblform" for="rut">RUT</label>
-            <input type="text" id="rut" name="rut" required><br/>
-            <label class="lblform" for="direccion">DIRECCIÓN</label>
-            <input type="text" id="address" name="address" required><br/>
-            <label class="lblform" for="direccion">COMUNA</label>
-            <input type="text" id="commune" name="commune" required><br/>
-            <label class="lblform" for="tel">TELÉFONO</label>
-            <input type="tel" id="phone" name="phone" required><br/>
-            <label class="lblform" for="mail">CORREO</label>
-            <input type="email" id="mail" name="mail" required><br/><br/>
-            <label class="lblform">ELIJA SU PRODUCTO A COTIZAR:</label><br/><br/>
+            <div class="inputforms">
+            <div class="lblinput">
+                <div class="inputlbl">
+                    <label class="lblform" for="name">NOMBRE COMPLETO</label>
+                <input class="forminput" type="text" id="name" name="name" required><br/>
+                </div>
+                <br/>
+                <div class="inputlbl">
+                    <label class="lblform" for="rut">RUT</label>
+                <input class="forminput" type="text" id="rut" name="rut" required><br/>
+                </div>
+                <br/>
+                <div class="inputlbl">
+                    <label class="lblform" for="direccion">DIRECCIÓN</label>
+                <input class="forminput" type="text" id="address" name="address" required><br/>
+                </div>
+                <br/>
+                <div class="inputlbl">
+                    <label class="lblform" for="direccion">COMUNA</label>
+                <input class="forminput" type="text" id="commune" name="commune" required><br/>
+                </div>
+                <br/>
+                <div class="inputlbl">
+                    <label class="lblform" for="tel">TELÉFONO</label>
+                <input class="forminput" type="tel" id="phone" name="phone" required><br/>
+                </div>
+                <br/>
+                <div class="inputlbl">
+                    <label class="lblform" for="mail">CORREO</label>
+                <input class="forminput" type="email" id="mail" name="mail" required>
+                </div>
+                
+            </div>
+            <!-- 
+                <label class="lblform" for="name">NOMBRE COMPLETO</label>
+                <input class="forminput" type="text" id="name" name="name" required><br/>
+                <br/>
+                <label class="lblform" for="rut">RUT</label>
+                <input class="forminput" type="text" id="rut" name="rut" required><br/>
+                <br/>
+                <label class="lblform" for="direccion">DIRECCIÓN</label>
+                <input class="forminput" type="text" id="address" name="address" required><br/>
+                <br/>
+                <label class="lblform" for="direccion">COMUNA</label>
+                <input class="forminput" type="text" id="commune" name="commune" required><br/>
+                <br/>
+                <label class="lblform" for="tel">TELÉFONO</label>
+                <input class="forminput" type="tel" id="phone" name="phone" required><br/>
+                <br/>
+                <label class="lblform" for="mail">CORREO</label>
+                <input class="forminput" type="email" id="mail" name="mail" required>
+             -->
+        </div>
+            <br/>
+            <br/>
+            <br/>
+            <label class="lblform">ELIJA SU PRODUCTO A COTIZAR:</label>
+        
+            <br/><br/>
             <img class="fotoform" src="/images/foto1.jpg" alt="pulsera">
             <input type="checkbox" id="foto1" name="product" value="Art. 101: pulsera protectora">
             <img class="fotoform" src="/images/foto2.jpg" alt="collar">
@@ -28,15 +74,15 @@
             <textarea class="commentbox" id="comment" name="comment" placeholder="Deje su comentario."></textarea><br/><br/>
             <input class="cotizar" type="submit" value="Cotizar" id="aceptar">
         </form>
-
+    </div>
         <div class="wsp">
             <a href="https://wa.me/56952170243" target="_blank">
                 <img class="wsplogo" src="/images/wsp.png" alt="wsp_logo">
             </a>
          </div>  
-         <div>
-            <a class="indice" href="/">Indice</a>
-         </div>
+         <div class="indice">
+            <a class="index" href="/">Índice</a>
+         </div> 
     </body>
 
 </html>

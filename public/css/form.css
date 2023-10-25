@@ -3,15 +3,21 @@
     src: url(Quicksand-Light.ttf);
 }
 
-.wsp { position: -webkit-sticky; position: sticky; bottom: 0; float: right;}
-.wsplogo { width: 50px; height: auto;}
+.wsp { bottom: 0; text-align: right;}
+.wsplogo { width: 50px; height: auto; }
 .fotoform {width: 10%; height: auto; }
 .commentbox {width: 400px; height: 100px; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
-.lblform, .cotizar { font-size: .8em; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
+.lblform, .cotizar { font-size: .8em; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b; }
+.lblinput { width: fit-content; }
+.inputlbl { width: 100%; text-align: left;} 
+.inputforms { display: inline-block;}
+.forminput { width: 100%;}
+.formu {display: block; text-align: center;}
 
 @media screen and (max-device-width: 480px) {
-    .wsplogo { width: 50px; height: auto;}
+    .wsp { position: -webkit-sticky; position: sticky; bottom: 0; float: right;}
+    .wsplogo { width: 60px; height: auto; }
     .fotoform {width: 25%; height: auto; }
     .commentbox {width: 90%; height: 300px; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
-    .lblform, .cotizar { font-size: 2em; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
+    .lblform, .cotizar { font-size: .8em; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b; }
 }
