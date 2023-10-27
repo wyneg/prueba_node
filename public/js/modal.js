@@ -14,7 +14,7 @@ for(let img of images){
 
 var modalImg = document.getElementById("img01")
 
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close")[0] = document.getElementsByClassName("modal")[0];
 
 span.onclick = function(){
     modal.style.display = "none";

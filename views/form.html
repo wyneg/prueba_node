@@ -6,6 +6,12 @@
         <title>Cotización</title>
     </head>
     <body>
+        <div class="nav">
+            <ul class="navbar">
+                <li class="links"><a class="link" href="/cotizacion">Cotización</a></li>
+                <li class="links"><a class="link" href="/">Home</a></li>
+            </ul>
+        </div>
        <div class="formu">
         <form action="/cotizacion" method="post">
             <div class="inputforms">
@@ -67,10 +73,61 @@
             <label class="lblform">ELIJA SU PRODUCTO A COTIZAR:</label>
         
             <br/><br/>
-            <img class="fotoform" src="/images/foto1.jpg" alt="pulsera">
-            <input type="checkbox" id="foto1" name="product" value="Art. 101: pulsera protectora">
-            <img class="fotoform" src="/images/foto2.jpg" alt="collar">
-            <input type="checkbox" id="foto2" name="product" value="Art. 102: collar niñ@s"><br/><br/>
+            <div class="fotosproductos">
+            <div class="products">
+                    <img class="fotoform" src="/images/image0.png" alt="Pulseras1">
+                <div class="checkboxes">
+                    <input type="checkbox" id="foto1" name="product" value="Art. 1: Pulsera amazonita 6mm.">
+                </div>
+            </div>
+            <div class="products">
+                <img class="fotoform" src="/images/image1.png" alt="Pulseras2">
+                <div class="checkboxes">
+                    <input type="checkbox" id="foto2" name="product" value="Art. 2: Pulseras amatista 8mm.">
+                </div>
+            </div>
+            <div class="products">
+                <img class="fotoform" src="/images/image2.png" alt="Pulseras3">
+                <div class="checkboxes">
+                    <input type="checkbox" id="foto2" name="product" value="Art. 3: Pulseras macrame morado.">
+                </div>
+            </div>
+            <div class="products">
+                <img class="fotoform" src="/images/image3.png" alt="Pulseras4">
+                <div class="checkboxes">
+                    <input type="checkbox" id="foto2" name="product" value="Art. 4: Mix pulseras cristal y cuarzo blanco 4mm.">
+                </div>
+            </div>
+        </div>
+        <div class="fotosproductos">
+            <div class="products">
+                <img class="fotoform" src="/images/image4.png" alt="Pulseras5">
+                <div class="checkboxes">
+                    <input type="checkbox" id="foto2" name="product" value="Art. 5: Pulseras macrame diferentes colores.">
+                </div>
+            </div>
+            <div class="products">
+                <img class="fotoform" src="/images/image5.png" alt="Pulseras6">
+                <div class="checkboxes">
+                    <input type="checkbox" id="foto2" name="product" value="Art. 6: Mix pulseras cuarzo y cristal 4mm.">
+                </div>
+            </div>
+            <div class="products">
+                <img class="fotoform" src="/images/image6.png" alt="Pulseras7">
+                <div class="checkboxes">
+                    <input type="checkbox" id="foto2" name="product" value="Art. 7: Pulsera caritas fimo.">
+                </div>
+            </div>
+            <div class="products">
+                <img class="fotoform" src="/images/image7.jpeg" alt="Pulseras8">
+                <div class="checkboxes">
+                    <input type="checkbox" id="foto2" name="product" value="Art. 8: Pulsera personalizada.">
+                </div>
+            </div>
+        </div>
+
+            <div class="relleno"></div>
+            
             <textarea class="commentbox" id="comment" name="comment" placeholder="Deje su comentario."></textarea><br/><br/>
             <input class="cotizar" type="submit" value="Cotizar" id="aceptar">
         </form>
@@ -80,9 +137,7 @@
                 <img class="wsplogo" src="/images/wsp.png" alt="wsp_logo">
             </a>
          </div>  
-         <div class="indice">
-            <a class="index" href="/">Índice</a>
-         </div> 
+       
     </body>
 
 </html>
