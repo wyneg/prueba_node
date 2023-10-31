@@ -8,11 +8,11 @@ import { fileURLToPath } from 'url';
 
 import Swal from 'sweetalert2';
 
+const alert = new Swal();
+
 /* const express = require('express');
 
 const path = require('path'); */
-
-const swal = new Swal();
 
 const app = express();
 
@@ -39,6 +39,7 @@ app.get('/cotizacion', (req, res) => {
 });
 
 app.post("/cotizacion", (req, res) => {
+
     const userName = req.body.name;
     const userMail = req.body.mail;
     const rut = req.body.rut;
@@ -49,37 +50,37 @@ app.post("/cotizacion", (req, res) => {
     const comment = req.body.comment;
     console.log(req.body.product);
 
-    resend.emails.send({
-        from: 'onboarding@resend.dev',
-        to: 'meipulseras@gmail.com',
-        subject: 'Cotización',
-        html: '<ol>'+
-        '<li><b>Nombre completo:</b> '+userName+'</li>'+
-        '<li><b>RUT:</b> '+rut+'</li>'+
-        '<li><b>Dirección:</b> '+address+'</li>'+
-        '<li><b>Comuna:</b> '+commune+'</li>'+
-        '<li><b>Teléfono:</b> '+phone+'</li>'+
-        '<li><b>Email:</b> '+userMail+'</li>'+
-        '</ol>'+
-        '<p><b>El/los productos a cotizar son los siguientes:</b> '+products+'</p>'+
-        '<p><b>Comentario:</b> '+comment+'</p>'
-    });
-
-    /* var btn = document.getElementById("aceptar");
-btn.onclick = function() {
-    Swal.fire({
-        title: 'Cotización OK',
-        text: 'Su cotización fue enviada correctamente. Espere nuestra respuesta.',
-        icon:'success',
-        confirmButtonText: 'Aceptar',
-        showConfirmButton: true,
-    }); 
-}*/
+        try {
+            resend.emails.send({
+                from: 'onboarding@resend.dev',
+                to: 'meipulseras@gmail.com',
+                subject: 'Cotización',
+                html: '<ol>'+
+                '<li><b>Nombre completo:</b> '+userName+'</li>'+
+                '<li><b>RUT:</b> '+rut+'</li>'+
+                '<li><b>Dirección:</b> '+address+'</li>'+
+                '<li><b>Comuna:</b> '+commune+'</li>'+
+                '<li><b>Teléfono:</b> '+phone+'</li>'+
+                '<li><b>Email:</b> '+userMail+'</li>'+
+                '</ol>'+
+                '<p><b>El/los productos a cotizar son los siguientes:</b> '+products+'</p>'+
+                '<p><b>Comentario:</b> '+comment+'</p>'
+            });
     
+            /* alert.fire({
+                title: 'Cotización OK',
+                text: 'Su cotización fue enviada correctamente. Espere nuestra respuesta.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                showConfirmButton: true,
+            });
+ */
+        } catch (e) {
+            console.log(e);
+        } 
     
+        res.redirect('/');
 
-    res.redirect('/');
-    /* res.send("Datos recibidos!"); */
     
 });
 
