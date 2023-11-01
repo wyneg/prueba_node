@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(Quicksand-Light.ttf);
+}
+
+.swal2-popup {
+    font-family: Quicksand;
+}

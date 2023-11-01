@@ -38,6 +38,18 @@ app.get('/cotizacion', (req, res) => {
     res.sendFile(path.join(__dirname + '/views/form.html'));
 });
 
+app.get('/enviado', (req, res) => {
+
+    res.sendFile(path.join(__dirname + '/views/ok.html'));
+
+});
+
+app.get('/noenviado', (req, res) => {
+
+    res.sendFile(path.join(__dirname + '/views/error.html'));
+
+});
+
 app.post("/cotizacion", (req, res) => {
 
     const userName = req.body.name;
@@ -48,13 +60,20 @@ app.post("/cotizacion", (req, res) => {
     const phone = req.body.phone;
     const products = req.body.product;
     const comment = req.body.comment;
-    console.log(req.body.product);
+    
+    var fecha = new Date();
+
+    var diaMesAnio = fecha.getDay().toString()+'-'+fecha.getMonth().toString()+'-'+fecha.getFullYear().toString();
+
+    var horaMinSeg = fecha.getHours().toString()+':'+fecha.getMinutes().toString()+':'+fecha.getSeconds().toString();
+
+    var fechaCompleta = diaMesAnio + ' ' + horaMinSeg;
 
         try {
             resend.emails.send({
                 from: 'onboarding@resend.dev',
                 to: 'meipulseras@gmail.com',
-                subject: 'Cotización',
+                subject: 'Cotización ' + fechaCompleta,
                 html: '<ol>'+
                 '<li><b>Nombre completo:</b> '+userName+'</li>'+
                 '<li><b>RUT:</b> '+rut+'</li>'+
@@ -67,20 +86,12 @@ app.post("/cotizacion", (req, res) => {
                 '<p><b>Comentario:</b> '+comment+'</p>'
             });
     
-            /* alert.fire({
-                title: 'Cotización OK',
-                text: 'Su cotización fue enviada correctamente. Espere nuestra respuesta.',
-                icon: 'success',
-                confirmButtonText: 'Aceptar',
-                showConfirmButton: true,
-            });
- */
+            res.redirect('/enviado');
+
         } catch (e) {
             console.log(e);
+            res.redirect('/noenviado');
         } 
-    
-        res.redirect('/');
-
     
 });
 

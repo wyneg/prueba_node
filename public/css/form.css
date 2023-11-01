@@ -17,15 +17,14 @@
 
 .links {
     display: inline;
-    float: right;
+    float: left;
 }
 
 .link {
-    display: block;
+    display: inline-block;
     padding: 8px;
     color: #7b7d7b;
     font-family: Quicksand; 
-    text-align: center;
     letter-spacing: .1rem; 
     text-decoration: none;
 }

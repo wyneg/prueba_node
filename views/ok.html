@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/swal.css?v=1.0">
+        <link rel="icon" href="/images/mei_logo_web.png" type="image/x-icon"/>
+        <title>OK</title>
+    </head>
+    <body>    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            Swal.fire({
+                title: 'Cotización OK',
+                text: 'Su cotización fue enviada correctamente. Espere nuestra respuesta.',
+                icon: 'success',
+                confirmButtonText: 'Aceptar',
+                showConfirmButton: true,
+            }).then(function() {
+                window.location = "/";
+            });
+        </script>
+    </body>
+
+</html>
+

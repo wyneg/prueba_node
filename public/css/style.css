@@ -2,6 +2,10 @@
     font-family: Quicksand;
     src: url(Quicksand-Light.ttf);
 }
+
+.logomei { width: 100px; height: auto; text-align: center;}
+.logo { text-align: center;}
+
 .divcenter { text-align: center; padding: 0;}
 .pic1, .pic2 { display: inline-block; text-align: center; overflow: hidden;}
 .foto1, .foto3 { width: 570px; height: 284.8px; float: left; overflow: hidden;}
@@ -12,7 +16,7 @@
     cursor: pointer;
 }
 .texto {font-family: Quicksand; text-align: center; letter-spacing: .1rem; color: #7b7d7b;}
-.wsp { bottom: 0; padding-right: 10px; text-align: right;}
+.wsp { position: -webkit-sticky; position: sticky; bottom: 0; padding-right: 10px; text-align: right;}
 .wsplogo { width: 50px; height: auto; }
 
 .nav {
@@ -72,15 +76,14 @@
 
 .links {
     display: inline;
-    float: right;
+    float: lef;
 }
 
 .link {
-    display: block;
+    display: inline-block;
     padding: 8px;
     color: #7b7d7b;
     font-family: Quicksand; 
-    text-align: center;
     letter-spacing: .1rem; 
     text-decoration: none;
 }
