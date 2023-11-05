@@ -6,14 +6,6 @@ import path from 'path';
 
 import { fileURLToPath } from 'url';
 
-import Swal from 'sweetalert2';
-
-const alert = new Swal();
-
-/* const express = require('express');
-
-const path = require('path'); */
-
 const app = express();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -61,19 +53,13 @@ app.post("/cotizacion", (req, res) => {
     const products = req.body.product;
     const comment = req.body.comment;
     
-    var fecha = new Date();
-
-    var diaMesAnio = fecha.getDay().toString()+'-'+fecha.getMonth().toString()+'-'+fecha.getFullYear().toString();
-
-    var horaMinSeg = fecha.getHours().toString()+':'+fecha.getMinutes().toString()+':'+fecha.getSeconds().toString();
-
-    var fechaCompleta = diaMesAnio + ' ' + horaMinSeg;
+    var fecha = new Date().toLocaleString('es-CL', { timezone: 'America/Santiago' });
 
         try {
             resend.emails.send({
                 from: 'onboarding@resend.dev',
                 to: 'meipulseras@gmail.com',
-                subject: 'Cotización ' + fechaCompleta,
+                subject: 'Cotización ' + fecha,
                 html: '<ol>'+
                 '<li><b>Nombre completo:</b> '+userName+'</li>'+
                 '<li><b>RUT:</b> '+rut+'</li>'+
@@ -94,8 +80,6 @@ app.post("/cotizacion", (req, res) => {
         } 
     
 });
-
-
 
 const port = process.env.PORT || 3000;
 
