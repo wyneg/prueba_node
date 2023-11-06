@@ -53,7 +53,7 @@ app.post("/cotizacion", (req, res) => {
     const products = req.body.product;
     const comment = req.body.comment;
     
-    var hora = new Date().toLocaleTimeString('en-US');
+    var hora = new Date().toLocaleTimeString('UTC-3');
 
     var fecha = new Date().toLocaleDateString('es-CL', { timezone: 'America/Santiago' })
 
