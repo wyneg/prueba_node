@@ -53,9 +53,9 @@ app.post("/cotizacion", (req, res) => {
     const products = req.body.product;
     const comment = req.body.comment;
 
-    var fecha = new Date().toLocaleDateString('es-CL', { timezone: 'America/Santiago' });
+    const fecha = new Date().toLocaleDateString('en-US', { timezone: 'America/Adak' });
 
-    var hora = new Date().toLocaleTimeString(undefined, { timezone: 'America/Adak' });
+    const hora = new Date().toLocaleTimeString('en-US', { timezone: 'America/Adak' });
 
     /* console.log(fecha +' '+hora); */
 
