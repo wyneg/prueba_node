@@ -53,13 +53,13 @@ app.post("/cotizacion", (req, res) => {
     const products = req.body.product;
     const comment = req.body.comment;
     
-    var hora = new Date().toLocaleTimeString(undefined, { timezone: 'UTC-3'});
+    var hora = new Date().toLocaleTimeString('en-US', { timezone: 'America/Chicago' });
 
     var fecha = new Date().toLocaleDateString('es-CL', { timezone: 'America/Santiago' });
 
     console.log(fecha +' '+hora);
 
-        try {
+       /*  try {
             resend.emails.send({
                 from: 'onboarding@resend.dev',
                 to: 'meipulseras@gmail.com',
@@ -81,7 +81,7 @@ app.post("/cotizacion", (req, res) => {
         } catch (e) {
             console.log(e);
             res.redirect('/noenviado');
-        } 
+        }  */
     
 });
 
