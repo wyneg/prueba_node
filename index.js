@@ -59,7 +59,7 @@ app.post("/cotizacion", (req, res) => {
 
     console.log(fecha +' '+hora);
 
-       /*  try {
+        try {
             resend.emails.send({
                 from: 'onboarding@resend.dev',
                 to: 'meipulseras@gmail.com',
@@ -81,7 +81,7 @@ app.post("/cotizacion", (req, res) => {
         } catch (e) {
             console.log(e);
             res.redirect('/noenviado');
-        }  */
+        } 
     
 });
 
