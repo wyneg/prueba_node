@@ -4,6 +4,8 @@ import express from 'express';
 
 import path from 'path';
 
+import {utcToZonedTime} from 'date-fns-tz';
+
 import { fileURLToPath } from 'url';
 
 const app = express();
@@ -53,9 +55,11 @@ app.post("/cotizacion", (req, res) => {
     const products = req.body.product;
     const comment = req.body.comment;
 
-    const fecha = new Date().toLocaleDateString('en-US', { timezone: 'America/Adak' });
+    const fecha = new Date().toLocaleDateString('es-CL', { timezone: 'America/Adak' });
 
-    const hora = new Date().toLocaleTimeString('en-US', { timezone: 'America/Adak' });
+    /* const hora = new Date().toLocaleTimeString('en-US', { timezone: 'America/Adak' }); */
+
+    const hora = utcToZonedTime(new Date(), 'America/Santiago').toLocaleTimeString();
 
     /* console.log(fecha +' '+hora); */
 
