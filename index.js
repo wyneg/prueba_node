@@ -53,13 +53,17 @@ app.post("/cotizacion", (req, res) => {
     const products = req.body.product;
     const comment = req.body.comment;
     
-    var fecha = new Date().toLocaleString('es-CL', { timezone: 'America/Santiago' });
+    var hora = new Date().toLocaleTimeString();
+
+    var fecha = new Date().toLocaleDateString('es-CL', { timezone: 'America/Santiago' })
+
+    console.log(fecha +' '+hora);
 
         try {
             resend.emails.send({
                 from: 'onboarding@resend.dev',
                 to: 'meipulseras@gmail.com',
-                subject: 'Cotización ' + fecha,
+                subject: 'Cotización ' + fecha + ' ' + hora,
                 html: '<ol>'+
                 '<li><b>Nombre completo:</b> '+userName+'</li>'+
                 '<li><b>RUT:</b> '+rut+'</li>'+
