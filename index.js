@@ -52,12 +52,12 @@ app.post("/cotizacion", (req, res) => {
     const phone = req.body.phone;
     const products = req.body.product;
     const comment = req.body.comment;
-    
-    var hora = new Date().toLocaleTimeString('en-US', { timezone: 'America/Chicago' });
 
     var fecha = new Date().toLocaleDateString('es-CL', { timezone: 'America/Santiago' });
 
-    console.log(fecha +' '+hora);
+    var hora = new Date().toLocaleTimeString(undefined, { timezone: 'America/Adak' });
+
+    /* console.log(fecha +' '+hora); */
 
         try {
             resend.emails.send({
