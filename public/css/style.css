@@ -79,10 +79,19 @@
 
 .links {
     display: inline;
-    float: lef;
+    float: left;
+}
+
+.links2 {
+    display: inline;
+    float: right;
 }
 
 .link {
+    text-decoration: none;
+}
+
+.links, .translate, .pipe {
     display: inline-block;
     padding: 8px;
     color: #303030;
@@ -91,7 +100,14 @@
     text-decoration: none;
 }
 
-.link:hover {
+.translate, .pipe {
+    background-color: none;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.link:hover, .translate:hover {
     color: rgb(15, 13, 13);
     background-color: rgba(69, 68, 68, 0.1);
 }
