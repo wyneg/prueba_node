@@ -14,6 +14,12 @@ var arrayLang = {
 $(document).ready(function() {
     var lang = "español";
 
+    const idioma = document.cookie;
+
+    if(idioma !== "" ){
+        lang = idioma;
+    }
+
     $(".lang").each(function(index, element){
         $(this).text(arrayLang[lang][$(this).attr("key")]);
     });
@@ -24,5 +30,6 @@ $(".translate").click(function(){
     
     $(".lang").each(function(index, element){
         $(this).text(arrayLang[lang][$(this).attr("key")]);
+        document.cookie = lang;
     });
 });

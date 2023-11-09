@@ -20,10 +20,20 @@
     float: left;
 }
 
+.links2 {
+    display: inline;
+    float: right;
+}
+
 .link {
+    color: #303030;
+    text-decoration: none;
+}
+
+.links, .translate, .pipe {
     display: inline-block;
     padding: 8px;
-    color: #7b7d7b;
+    color: #303030;
     font-family: Quicksand; 
     letter-spacing: .1rem; 
     text-decoration: none;
@@ -32,6 +42,13 @@
 .link:hover {
     color: rgb(15, 13, 13);
     background-color: rgba(69, 68, 68, 0.1);
+}
+
+.translate, .pipe {
+    background-color: none;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
 }
 
 .products,
