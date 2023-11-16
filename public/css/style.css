@@ -3,6 +3,21 @@
     src: url(Quicksand-Light.ttf);
 }
 
+.intro {
+    text-align: justify;
+    text-justify: inter-word;
+    width: 68%;
+    margin: auto;
+}
+
+h4 {
+    font-weight: 100;
+}
+
+.pe {
+    text-transform: uppercase;
+}
+
 .logomei { width: 100px; height: auto; text-align: center;}
 .logo { text-align: center;}
 
