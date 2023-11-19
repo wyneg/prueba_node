@@ -61,11 +61,39 @@
     height: 100px;
 }
 
+.relleno2 {
+    width: 100%;
+    height: 50px;
+}
+
+.pe {
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: 1px solid #e7837d;
+    padding: 9px 20px;
+    margin: 4px 2px;
+    color: white;
+    background-color: #e7837d;
+    font-size: .8em; 
+    font-family: Quicksand; 
+    letter-spacing: .1rem;
+}
+
+.pe:hover {
+    color: #e7837d;
+    background-color: white;
+    transition-property: all;
+    -webkit-transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+}
+
 .wsp { bottom: 0; text-align: right;}
 .wsplogo { width: 50px; height: auto; }
 .fotoform {width: 75%; height: auto; }
 .commentbox {width: 400px; height: 100px; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b;}
-.lblform, .cotizar { font-size: .8em; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b; }
+.lblform { font-size: .8em; font-family: Quicksand; letter-spacing: .1rem; color: #7b7d7b; }
 .lblinput { width: fit-content; }
 .inputlbl { width: 100%; text-align: left;} 
 .inputforms { display: inline-block;}

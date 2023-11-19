@@ -8,13 +8,13 @@ var arrayLang = {
         "Todas nuestras pulseras son 100% hechas a mano con materiales cuidadosamente seleccionados como: piedras naturales, cristales, vidrio, acero y plata. "+
         "Cada pieza es única y está hecha con mucho cariño. Si te gustó mi trabajo, no dudes en contactarme.",
         "SIGUE": "SÍGUENOS",
-        "F1": "NOMBRE COMPLETO",
-        "F2": "RUT",
-        "F3": "DIRECCIÓN",
-        "F4": "COMUNA",
-        "F5": "TELÉFONO",
-        "F6": "CORREO",
-        "F7": "ELIJA SU PRODUCTO A COTIZAR:",
+        "F1": "NOMBRE COMPLETO:",
+        "F2": "RUT:",
+        "F3": "DIRECCIÓN:",
+        "F4": "COMUNA:",
+        "F5": "TELÉFONO:",
+        "F6": "CORREO:",
+        "F7": "COTIZA TU PRODUCTO:",
     },
     "english": {
         "HOME": "Home",
@@ -25,13 +25,13 @@ var arrayLang = {
         " All our bracelets are 100% handmade with carefully selected materials such as: natural stones, crystals, glass, steel and silver. "+
         "Each piece is unique and made with love. If you liked my work, don't hesitate to contact me.",
         "SIGUE": "FOLLOW US",
-        "F1": "FULL NAME",
-        "F2": "ID",
-        "F3": "ADDRESS",
-        "F4": "ZIP CODE",
-        "F5": "PHONE NUMBER",
-        "F6": "EMAIL",
-        "F7": "CHOOSE YOUR PRODUCT TO QUOTE:",
+        "F1": "FULL NAME:",
+        "F2": "ID:",
+        "F3": "ADDRESS:",
+        "F4": "ZIP CODE:",
+        "F5": "PHONE NUMBER:",
+        "F6": "EMAIL:",
+        "F7": "QUOTE YOUR PRODUCT:",
     }
 };
 
@@ -40,7 +40,7 @@ function textos (lang){
         $('textarea').attr("placeholder", "Leave us your comment.");
         $('input:submit').attr("value", "Pricing");
     } else {
-        $('textarea').attr("placeholder", "Deje su comentario.");
+        $('textarea').attr("placeholder", "Deja tu comentario.");
         $('input:submit').attr("value", "Cotizar");
     }
 }

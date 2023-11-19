@@ -15,7 +15,32 @@ h4 {
 }
 
 .pe {
+    border: 1px solid #e7837d;
+    border-radius: 20px;
+    padding: 9px 20px;
+    margin: 4px 2px;
+    color: white;
+    background-color: #e7837d;
+    
+}
+
+.cotiza {
     text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    font-size: .9rem;
+    color: white;
+}
+
+.pe:hover {
+    color: #e7837d;
+    background-color: white;
+    transition-property: all;
+    -webkit-transition-property: all;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
 }
 
 .logomei { width: 100px; height: auto; text-align: center;}
@@ -34,7 +59,8 @@ h4 {
 .texto {font-family: Quicksand; text-align: center; letter-spacing: .1rem; color: #303030; font-size: 1.1rem;}
 .foot {font-family: Quicksand; text-align: center; letter-spacing: .1rem; color: #7b7d7b; position: absolute; left: 0; right: 0; margin: auto;}
 .wsp { position: -webkit-sticky; position: sticky; bottom: 0; padding-right: 10px; text-align: right;}
-.wsplogo { width: 50px; height: auto; }
+.wsplogo { width: 40px; height: auto; }
+.sigue {font-size: .9rem;}
 .logosredes {width: 35px; height: auto; text-decoration: none;}
 
 .nav {
