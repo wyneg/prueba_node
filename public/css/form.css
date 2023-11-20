@@ -110,4 +110,11 @@
     .products,
     .checkboxes { width: 128.15px; height: auto; display: inline-block;}
     .fotosproductos { width: 100%; }
+
+    /* Menú sandwich mobile */
+    .nav { overflow: hidden; position: relative; }
+    .nav #navbar { display: none; }
+    .links, .links2 { float: left; color: #303030; width: 100%;}
+    .icon { display: block; position: absolute; left: 10px; top: 10px; color: #303030;}
+    .pipe {display: none;}
 }
