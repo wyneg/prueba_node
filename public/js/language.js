@@ -15,6 +15,7 @@ var arrayLang = {
         "F5": "TELÉFONO:",
         "F6": "CORREO:",
         "F7": "COTIZA TU PRODUCTO:",
+        "F8": "*Imágenes referenciales.",
     },
     "english": {
         "HOME": "Home",
@@ -32,6 +33,7 @@ var arrayLang = {
         "F5": "PHONE NUMBER:",
         "F6": "EMAIL:",
         "F7": "QUOTE YOUR PRODUCT:",
+        "F8": "*Reference images.",
     }
 };
 
