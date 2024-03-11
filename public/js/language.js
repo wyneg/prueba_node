@@ -2,7 +2,7 @@ var arrayLang = {
     "español": {
         "HOME": "Home",
         "COTIZ": "Cotización",
-        "BIEN": "BIENVENIDOS A MEI PULSERAS.",
+        "BIEN": "BIENVENIDOS!",
         "INTRO": "¡Hola! Mi nombre es Marcela Buljevic, Diseñadora Gráfica y fanática de las manualidades. Me gustaría presentarte Mei Pulseras, mi emprendimiento, que nace el año 2022 con el fin de crear pulseras coloridas y atemporales, para combinar con tu outfit del día a día. Todas nuestras pulseras son hechas a mano con materiales cuidadosamente seleccionados como: piedras naturales, cristales, vidrio, acero y plata. Cada pieza es única y está hecha con mucho cariño. Si te gusta mi trabajo, no dudes en contactarme.",
         "SIGUE": "SÍGUENOS",
         "F1": "NOMBRE COMPLETO:",
@@ -17,7 +17,7 @@ var arrayLang = {
     "english": {
         "HOME": "Home",
         "COTIZ": "Pricing",
-        "BIEN": "WELCOME TO MEI BRACELETS.",
+        "BIEN": "WELCOME!",
         "INTRO": "Hello! My name is Marcela Buljevic. I’m a Graphic designer and crafts enthusiast. I’m proud to introduce you to my business which was born in 2022 with the aim of creating colourful and timeless bracelets to complement with your everyday outfit. All our bracelets are handmade with carefully selected materials such as: natural stones, crystals, glass, steel and silver. Each piece is unique and made with love. If you’re interested in my work, don’t hesitate to contact me.",
         "SIGUE": "FOLLOW US",
         "F1": "FULL NAME:",
@@ -60,6 +60,13 @@ $(".translate").click(function(){
     var lang = $(this).attr("id");
 
     textos(lang);
+
+    if(lang === "english"){
+        console.log(lang);
+        $(".centro").attr('style', 'width: 136px');
+    } else {
+        $(".centro").attr('style', 'width: 125px');
+    }
     
     $(".lang").each(function(index, element){
         $(this).text(arrayLang[lang][$(this).attr("key")]);
