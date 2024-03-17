@@ -13,6 +13,7 @@ var arrayLang = {
         "F6": "CORREO:",
         "F7": "COTIZA TU PRODUCTO:",
         "F8": "*Imágenes referenciales.",
+        "F9": "Deja tu comentario.",
     },
     "english": {
         "HOME": "Home",
@@ -28,18 +29,31 @@ var arrayLang = {
         "F6": "EMAIL:",
         "F7": "QUOTE YOUR PRODUCT:",
         "F8": "*Reference images.",
+        "F9": "Leave us your comment.",
     }
 };
 
+
 function textos (lang){
+
     if(lang === "english"){
-        $('textarea').attr("placeholder", "Leave us your comment.");
         $('input:submit').attr("value", "Pricing");
     } else {
-        $('textarea').attr("placeholder", "Deja tu comentario.");
         $('input:submit').attr("value", "Cotizar");
     }
 }
+
+function espaciado(){
+    if(document.cookie === "english"){
+        $(".centro").attr('style', 'width: 136px');
+    } else {
+        $(".centro").attr('style', 'width: 125px');
+    }
+}
+
+$(window).on("load", function(){
+    espaciado();
+});
 
 $(document).ready(function() {
     var lang = "español";
@@ -61,15 +75,9 @@ $(".translate").click(function(){
 
     textos(lang);
 
-    if(lang === "english"){
-        console.log(lang);
-        $(".centro").attr('style', 'width: 136px');
-    } else {
-        $(".centro").attr('style', 'width: 125px');
-    }
-    
     $(".lang").each(function(index, element){
         $(this).text(arrayLang[lang][$(this).attr("key")]);
         document.cookie = lang;
+        espaciado();
     });
 });
