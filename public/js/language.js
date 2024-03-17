@@ -75,8 +75,6 @@ $(".translate").click(function(){
 
     textos(lang);
 
-   
-    
     $(".lang").each(function(index, element){
         $(this).text(arrayLang[lang][$(this).attr("key")]);
         document.cookie = lang;
