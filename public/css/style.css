@@ -59,8 +59,8 @@ h4 {
 .welcome {font-family: Quicksand; text-align: center; letter-spacing: .1rem; color: #303030; font-size: 1rem;}
 .texto {font-family: Quicksand; text-align: center; letter-spacing: .1rem; color: #303030; font-size: 1.1rem;}
 .foot {font-family: Quicksand; text-align: center; letter-spacing: .1rem; color: #7b7d7b; position: absolute; left: 0; right: 0; margin: auto;}
-.wsp { position: -webkit-sticky; position: sticky; bottom: 0; padding-right: 10px; text-align: right;}
-.wsplogo { width: 40px; height: auto; }
+/* .wsp { position: -webkit-sticky; position: sticky; bottom: 0; padding-right: 10px; text-align: right;}
+.wsplogo { width: 40px; height: auto; } */
 
 .sigue {font-size: .9rem; width: auto; height: 35px; }
 .logosredes {width: 35px; height: auto; text-decoration: none;}
@@ -183,6 +183,7 @@ h4 {
     .pipe {display: none;}
     .sigue {margin-top: 7px;}
     .instalogo { width: 40px; }
+
     .grid-container {
         grid-template-columns: auto auto;
         gap: 10px;
