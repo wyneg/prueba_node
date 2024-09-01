@@ -28,8 +28,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/views/index.html'));
 });
 
+app.get('/english', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/english.html'));
+});
+
 app.get('/cotizacion', (req, res) => {
     res.sendFile(path.join(__dirname + '/views/form.html'));
+});
+
+app.get('/pricing', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/formenglish.html'));
 });
 
 app.get('/enviado', (req, res) => {
