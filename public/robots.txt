@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Allow: /cotizacion
+Allow: /english
+Allow: /pricing
 Disallow: /enviado
 Disallow: /noenviado
 
