@@ -15,12 +15,12 @@ h4 {
 }
 
 .pe {
-    border: 1px solid #e7837d;
+    border: 1px solid #e4437e;
     border-radius: 20px;
     padding: 9px 20px;
     margin: 4px 2px;
     color: white;
-    background-color: #e7837d;
+    background-color: #e4437e;
     
 }
 
@@ -34,7 +34,7 @@ h4 {
 }
 
 .pe:hover {
-    color: #e7837d;
+    color: #e4437e;
     background-color: white;
     transition-property: all;
     -webkit-transition-property: all;
@@ -43,7 +43,7 @@ h4 {
     transition-delay: 0s;
 }
 
-.logomei { width: 100px; height: auto; text-align: center;}
+.logomei { width: 300px; height: auto; text-align: center;}
 .logo { text-align: center;}
 
 .divcenter { text-align: center;}
