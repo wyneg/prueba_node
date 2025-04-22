@@ -6,7 +6,7 @@ import { MongoClient } from "mongodb";
 import { comparePassword, hashPassword } from './hash/hashing.js';
 import cartNumeration from './middleware/cartCount.js';
 import cartDuration from './middleware/cartSession.js';
-const uri = "mongodb+srv://meiAppWebPage:kza4dfRC9hQwgcae@meipulserasdatabase.wrcqz.mongodb.net/?retryWrites=true&w=majority&appName=MeiPulserasDataBase";
+const uri = process.env.MONGODB_DB_URI;
 import verifyJWT from './middleware/verifyJWT.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -38,6 +38,8 @@ router.get("/info", async (req, res) => {
         const data = verifyJWT(token);
 
         const items = await cartNumeration(data);
+
+        cartDuration(data);
 
         if(data == ''){
             return res.status(401).redirect("/auth/logout");

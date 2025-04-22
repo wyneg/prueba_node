@@ -3,23 +3,20 @@ import { Resend } from 'resend';
 import jwt from 'jsonwebtoken';
 import User from "./models/User.js";
 import Blue from './models/Blue.js';
-// import Cart from './models/Cart.js';
-// import ProductQuantity from './models/ProductQuantity.js';
-// import session from 'express-session';
 import cartDuration from './middleware/cartSession.js';
 import Randomstring from 'randomstring';
 import { MongoClient } from "mongodb";
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import Config from './config.json' with { type: 'json' };
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 import { config } from "dotenv";
 import { comparePassword, hashPassword } from './hash/hashing.js';
 import UserInfo from './models/UserInfo.js';
-import verifyJWT from "./middleware/verifyJWT.js";
-const uri = "mongodb+srv://meiAppWebPage:kza4dfRC9hQwgcae@meipulserasdatabase.wrcqz.mongodb.net/?retryWrites=true&w=majority&appName=MeiPulserasDataBase"; 
-const resend = new Resend('re_X8pamAX5_FQUm3vQAXRkkgjwf46sFrkFC');
+const uri = Config.MONGODB_DB_URI;
+const resend = new Resend(Config.RESEND);
 
 
 const app = express();

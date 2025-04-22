@@ -19,8 +19,8 @@ import verifyJWT from "./middleware/verifyJWT.js";
 import authRouter from "./authorization.js";
 import userInfo from "./setUserInfo.js";
 import { MongoClient } from "mongodb";
-import Swal from 'sweetalert2';
-const uri = "mongodb+srv://meiAppWebPage:kza4dfRC9hQwgcae@meipulserasdatabase.wrcqz.mongodb.net/?retryWrites=true&w=majority&appName=MeiPulserasDataBase"; 
+const uri = process.env.MONGODB_DB_URI;
+
 
 const app = express();
 config();
@@ -50,7 +50,7 @@ app.set('views', path.join(__dirname + '/views/'));
 app.set('view engine', 'ejs');
 app.use('/user', userInfo);
 
-const resend = new Resend('re_X8pamAX5_FQUm3vQAXRkkgjwf46sFrkFC');
+const resend = new Resend(process.env.RESEND);
 
 //Para que pesque imagenes y estilos
 app.use(express.static(__dirname + '/public'));
@@ -345,12 +345,12 @@ app.post('/pagar', async (req, res) => {
             $set: { total: totalToPay }
         });
 
-    const secretKey = "3836a8ab4b1c43362d15c106d06f245050f93b08";
+    const secretKey = process.env.SECRET_KEY;
     const urlFlow = "https://sandbox.flow.cl/api";
     const createPayment = urlFlow + "/payment/create";
 
     const amount = totalToPay;
-    const apiKey = "4424F640-5D77-4B7A-9854-1L7AF1E6C564";
+    const apiKey =  process.env.API_KEY;
     const commerceOrder = Randomstring.generate(7);
     const currency = "CLP";
     const email = "wynegsrhuntar@gmail.com";
@@ -407,14 +407,14 @@ app.post('/pagar', async (req, res) => {
 
 app.post('/result', async (req, res) => {
 
-    const apiKey = "4424F640-5D77-4B7A-9854-1L7AF1E6C564";
+    const apiKey = process.env.API_KEY;
 
     const params = {
         token: req.body.token,
         apiKey: apiKey
     }
 
-    const secretKey = "3836a8ab4b1c43362d15c106d06f245050f93b08";
+    const secretKey = process.env.SECRET_KEY;
 
     const urlFlow = "https://sandbox.flow.cl/api";
     const getPayment = urlFlow + "/payment/getStatus";
