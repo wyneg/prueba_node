@@ -26,7 +26,7 @@
 }
 
 .link {
-    color: #303030;
+    color: #7b7d7b;
     text-decoration: none;
 }
 
@@ -120,7 +120,7 @@
     /* Menú sandwich mobile */
     .nav { overflow: hidden; position: relative; }
     .nav #navbar { display: none; }
-    .links, .links2 { float: left; color: #303030; width: 100%;}
+    .links, .links2 { float: left; color: #303030; width: 20%;}
     .icon { display: block; position: absolute; left: 10px; top: 10px; color: #303030;}
     .pipe {display: none;}
 }

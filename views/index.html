@@ -8,16 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <title>Mei Pulseras</title>
 </head>
-<body>
-    <!-- <div class="nav" id="nav">
-        <ul class="navbar" id="navbar">
-            <li class="links"><a class="lang link" key="HOME" href="/">Home</a></li>
-        </ul>
-            <a href="javascript:void(0);" class="icon" onclick="navbar()">
-                <i class="fa fa-bars"></i>
-            </a>
-    </div> -->
-   
+<body onload="titles();">
     <div class="logo">
         <br><br><br>
         <img class="logomei" src="/images/webp/logo.webp" alt="logo">
@@ -26,7 +17,6 @@
     <div class="welcome">
         <h2 class="lang" key="BIEN">¡Hola!</h2>
     </div>
-    <!-- <br> -->
     <div class="intro texto">
         <h4 class="lang" key="INTRO">
             Soy Marcela, diseñadora y apasionada por las manualidades.Crear con las manos ha sido mi forma de expresarme,
@@ -43,18 +33,18 @@ Si conectas con mi trabajo, estaré feliz de ayudarte a encontrar tu pulsera ide
     <div class="relleno"></div>
     <div class="divcenter">
         <div class="grid-container">
-            <div class="grid-item"><img class="foto" src="/images/webp/image101.webp" alt="Pulseras1" title="01. Pulsera macramé roja."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image102.webp" alt="Pulseras2" title="02. Feria septiembre 2023."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image103.webp" alt="Pulseras3" title="03. Pulseras para compartir."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image104.webp" alt="Pulseras4" title="04. Amuleto Protector."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image105.webp" alt="Pulseras5" title="05. Pulsera amazonita 6mm."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image106.webp" alt="Pulseras6" title="06. Pulseras cuarzo cristal."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image107.webp" alt="Pulseras7" title="07. Pulsera Amatista 8mm."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image108.webp" alt="Pulseras8" title="08. Pulseras cuarzo cristal."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image109.webp" alt="Pulseras9" title="09. Pulseras macramé."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image110.webp" alt="Pulseras10" title="10. Pulsera ágatas 3mm."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image111.webp" alt="Pulseras11" title="11. Pulseras para compartir."></div>
-            <div class="grid-item"><img class="foto" src="/images/webp/image112.webp" alt="Pulseras12" title="12. Pulseras macramé morado."></div>
+            <div class="grid-item"><img id="1" class="foto" src="/images/webp/1image.webp"></div>
+            <div class="grid-item"><img id="2" class="foto" src="/images/webp/2image.webp"></div>
+            <div class="grid-item"><img id="3" class="foto" src="/images/webp/3image.webp"></div>
+            <div class="grid-item"><img id="4" class="foto" src="/images/webp/4image.webp"></div>
+            <div class="grid-item"><img id="5" class="foto" src="/images/webp/5image.webp"></div>
+            <div class="grid-item"><img id="6" class="foto" src="/images/webp/6image.webp"></div>
+            <div class="grid-item"><img id="7" class="foto" src="/images/webp/7image.webp"></div>
+            <div class="grid-item"><img id="8" class="foto" src="/images/webp/8image.webp"></div>
+            <!-- <div class="grid-item"><img id="9" class="foto" src="/images/webp/9image.webp"></div> -->
+            <!-- <div class="grid-item"><img id="10" class="foto" src="/images/webp/10image.webp"></div> -->
+            <!-- <div class="grid-item"><img id="11" class="foto" src="/images/webp/11image.webp"></div> -->
+            <!-- <div class="grid-item"><img id="12" class="foto" src="/images/webp/12image.webp"></div> -->
           </div>
     </div>
     <div class="relleno"></div>
@@ -74,17 +64,11 @@ Si conectas con mi trabajo, estaré feliz de ayudarte a encontrar tu pulsera ide
     <footer class="foot">
         <p>Mei Pulseras 2019 &#8729; Santo Domingo, Chile.</p>
     </footer>
-   <!--  <div class="wsp">
-        <a href="https://wa.me/56952170243" target="_blank">
-            <img class="wsplogo" src="/images/webp/wsp.webp" alt="wsp_logo">
-        </a>
-    </div> -->
     <div class="modal" id="modalfotos">
         <span class="close">&times;</span>
         <img class="modal-content" id="img01">
     </div>
-    <!-- <script src="/js/language.js" type="text/javascript"></script> -->
     <script src="/js/modal.js" type="text/javascript"></script>
-    <!-- <script src="/js/navbar.js" type="text/javascript"></script> -->
+    <script src="/js/title.js" type="text/javascript"></script>
 </body>
 </html>
